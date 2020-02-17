@@ -1,0 +1,25 @@
+{
+  "name": "AwesomeApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "dev": "node index.js"
+  },
+  "author": "Ridha BEN RHOUMA",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.17.1",
+    "js-base64": "^2.5.1",
+    "mongoose": "^5.7.10",
+    "mongose": "0.0.2-security",
+    "node": "^13.1.0",
+    "nodemon": "^1.19.4",
+    "sha256": "^0.2.0",
+    "uid2": "0.0.3",
+    "uuid-token-generator": "^1.0.0"
+  }
+}
