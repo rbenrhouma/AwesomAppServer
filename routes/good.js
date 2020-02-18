@@ -10,7 +10,7 @@ router.post('/publish', async (req, res) => {
 		const price = req.body.price;
 		const address = req.body.address;
 		const loc = req.body.loc;
-		if (title && description && photos && price && city && loc) {
+		if (title && description && photos && price  && loc) {
 			const good = new Good({
 				title: title,
 				description: description,
@@ -43,10 +43,9 @@ router.get('/:id', async (req, res) => {
 
 const createFilters = (req) => {
 	const filters = {};
-
-	if (req.query.city) {
-		filters.city = req.query.city;
-	}
+	// if (req.query.city) {
+	// 	filters.city = req.query.city;
+	// }
 	return filters;
 };
 
@@ -54,9 +53,7 @@ router.get('/', async (req, res) => {
 	try {
 		console.log(req);
 		const filters = createFilters(req);
-
 		const search = Good.find(filters);
-
 		if (req.query.page) {
 			const page = req.query.page;
 			const limit = 2;
